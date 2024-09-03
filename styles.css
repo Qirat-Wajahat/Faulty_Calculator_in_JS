@@ -1,0 +1,50 @@
+body {
+    background-color: #f8f9fa; /* Default light theme background */
+    color: #212529; /* Default text color */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: #121212; /* Dark theme background */
+    color: #ffffff; /* Dark theme text color */
+}
+
+.card {
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card.dark-mode {
+    background-color: #1e1e1e;
+    border-color: #2e2e2e;
+}
+
+.form-label {
+    transition: color 0.3s ease;
+}
+
+.form-label.dark-mode {
+    color: #bbbbbb;
+}
+
+.btn-dark-mode {
+    color: #ffffff;
+    background-color: #333333;
+    border-color: #444444;
+}
+
+#output {
+    background-color: #f8f9fa;
+    color: #212529;
+    font-size: 1.5rem;
+    font-weight: bold;
+    min-height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode #output {
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
