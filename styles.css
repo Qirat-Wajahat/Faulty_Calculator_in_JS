@@ -26,12 +26,6 @@ body.dark-mode {
     color: #bbbbbb;
 }
 
-.btn-dark-mode {
-    color: #ffffff;
-    background-color: #333333;
-    border-color: #444444;
-}
-
 #output {
     background-color: #f8f9fa;
     color: #212529;
@@ -46,5 +40,22 @@ body.dark-mode {
 
 body.dark-mode #output {
     background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Icon button styles */
+#themeToggleBtn {
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+}
+
+#themeIcon {
+    font-size: 1.5rem;
+    color: #212529;
+    transition: color 0.3s ease;
+}
+
+body.dark-mode #themeIcon {
     color: #ffffff;
 }

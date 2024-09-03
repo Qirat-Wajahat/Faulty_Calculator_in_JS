@@ -1,5 +1,7 @@
 // Theme toggle functionality
 const themeToggleBtn = document.getElementById('themeToggleBtn');
+const themeIcon = document.getElementById('themeIcon');
+
 themeToggleBtn.addEventListener('click', function () {
     const body = document.body;
     const card = document.querySelector('.card');
@@ -15,11 +17,11 @@ themeToggleBtn.addEventListener('click', function () {
     });
 
     if (body.classList.contains('dark-mode')) {
-        themeToggleBtn.textContent = 'Switch to Light Mode';
-        themeToggleBtn.classList.add('btn-dark-mode');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
     } else {
-        themeToggleBtn.textContent = 'Switch to Dark Mode';
-        themeToggleBtn.classList.remove('btn-dark-mode');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
     }
 });
 
@@ -54,12 +56,19 @@ function calculate() {
 // Event listener for submit button
 document.getElementById("submitBtn").addEventListener("click", calculate);
 
-// Event listener for Enter key press
-document.querySelectorAll('input').forEach(input => {
+// Event listener for Enter key press to focus on next input
+document.querySelectorAll('input').forEach((input, index, inputs) => {
     input.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); // Prevent form submission if inside a form
-            document.getElementById('submitBtn').click();
+            event.preventDefault(); // Prevent default Enter key behavior
+
+            // Move focus to the next input field
+            if (index < inputs.length - 1) {
+                inputs[index + 1].focus();
+            } else {
+                // If last input field, trigger submit button click
+                document.getElementById('submitBtn').click();
+            }
         }
     });
 });
