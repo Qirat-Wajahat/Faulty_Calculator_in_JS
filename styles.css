@@ -1,3 +1,31 @@
+/* styles.css */
+
+/* Container for header with logo and title */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Aligns items to the start (left) */
+    margin-bottom: 1.5rem; /* Adjust the bottom margin as needed */
+}
+
+/* Style for the logo */
+.header-container img {
+    max-height: 100px; /* Adjust size as needed */
+    margin-right: 15px; /* Space between logo and heading */
+    transition: filter 0.3s ease; /* Smooth transition for filter changes */
+}
+
+/* Dark mode styles */
+body.dark-mode .header-container img {
+    filter: invert(1) brightness(0.9); /* Adjust color for dark mode */
+}
+
+/* Style for the heading */
+.header-container h1 {
+    margin: 0;
+}
+
+/* Body and other styles as before */
 body {
     background-color: #f8f9fa; /* Default light theme background */
     color: #212529; /* Default text color */

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Faulty Calculator</title>
+    <!-- Link to Favicon -->
+    <link rel="icon" href="images/Qira_logo.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
@@ -12,8 +14,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div class="container mt-5">
-        <h1 class="text-center mb-3">Faulty Calculator</h1>
+    <div class="container mt-1">
+        <!-- Header with logo and title -->
+        <header class="header-container mb-3">
+            <img id="logo" src="images/Qira_logo.png" alt="Qira Logo" class="img-fluid mt-2">
+            <h1 class="mx-auto mt-3 text-center">Faulty Calculator</h1>
+        </header>
         <div class="text-end mb-3">
             <button id="themeToggleBtn" class="btn btn-secondary">
                 <i id="themeIcon" class="fas fa-sun"></i>
@@ -35,7 +41,7 @@
             <button id="submitBtn" class="btn btn-primary w-100">Submit</button>
         </div>
         <!-- Output area -->
-        <div id="output" class="mt-4 text-center p-3 rounded shadow"></div>
+        <div id="output" class="my-4 text-center p-3 rounded shadow"></div>
     </div>
 
     <!-- Bootstrap JS and dependencies -->
